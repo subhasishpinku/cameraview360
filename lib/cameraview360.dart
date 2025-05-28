@@ -11,7 +11,7 @@ import 'package:vector_math/vector_math_64.dart' hide Colors;
 import 'dart:io';
 import 'package:wakelock_plus/wakelock_plus.dart';
 
-class Camera360 extends StatefulWidget {
+class cameraview360 extends StatefulWidget {
   /// Callback called when capture has ended and panorama is prepared
   final void Function(Map<String, dynamic>) onCaptureEnded;
 
@@ -67,7 +67,7 @@ class Camera360 extends StatefulWidget {
   /// Camera not ready content [Widget]
   final Widget? cameraNotReadyContent;
 
-  const Camera360({
+  const cameraview360({
     Key? key,
     required this.onCaptureEnded,
     this.onCameraChanged,
@@ -89,12 +89,12 @@ class Camera360 extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<Camera360> createState() => _Camera360State();
+  State<cameraview360> createState() => _Camera360State();
 }
 
 // THE STATE IS BEING UPDATED EVERY SET SECONDS
 // The state is updated by this function _setupSensors
-class _Camera360State extends State<Camera360> with WidgetsBindingObserver {
+class _Camera360State extends State<cameraview360> with WidgetsBindingObserver {
   // A list with all available camera
   late List<CameraDescription> cameras;
   // Camera controller
